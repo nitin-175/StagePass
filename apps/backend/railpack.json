@@ -1,0 +1,5 @@
+{
+  "runtime": "java",
+  "build": "cd backend && mvn clean package",
+  "start": "cd backend && java -jar target/*.jar"
+}
