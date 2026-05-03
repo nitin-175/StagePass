@@ -2,8 +2,8 @@ import axios from "axios";
 import { useSessionStore } from "../store/sessionStore";
 
 export const api = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL ?? "https://stagepass-2.onrender.com/api/",
-  timeout: 10000,
+  baseURL: import.meta.env.VITE_API_BASE_URL ?? "https://stagepass-2.onrender.com/api",
+  timeout: 100000,
 });
 
 api.interceptors.request.use((config) => {
