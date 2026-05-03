@@ -119,6 +119,7 @@ export function HomePage() {
            </div>
         </div>
       </section>
+              
     </div>
   );
 }
