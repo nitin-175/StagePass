@@ -1,6 +1,6 @@
 import { useState, type FormEvent } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { register } from "../services/authService";
+import { Link, useLocation, useNavigate, useSearchParams } from "react-router-dom";
+import { login, register } from "../services/authService";
 import { useSessionStore } from "../store/sessionStore";
 
 const googleAuthUrl = import.meta.env.VITE_GOOGLE_AUTH_URL;
