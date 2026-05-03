@@ -3,6 +3,7 @@ import type { ShowSummary } from "@show-booking/types";
 import { SectionHeader } from "../components/SectionHeader";
 import { ShowCard } from "../components/ShowCard";
 import { getShows } from "../services/showService";
+import { Navigate } from "react-router-dom";
 
 export function ShowListingPage() {
   const [shows, setShows] = useState<ShowSummary[]>([]);
@@ -37,7 +38,7 @@ export function ShowListingPage() {
           <div className="rounded-[32px] border border-red-100 bg-red-50 p-12 text-center">
             <p className="text-lg font-bold text-red-600">{error}</p>
             <button 
-              onClick={() => window.location.reload()}
+              onClick={getShows}
               className="mt-6 btn-secondary text-red-600 hover:bg-red-100"
             >
               Try Again
