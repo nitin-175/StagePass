@@ -9,11 +9,16 @@ export const api = axios.create({
 api.interceptors.request.use((config) => {
   const token = useSessionStore.getState().token;
 
-  if (token && token !== "undefined" && token !== "null") {
+  // Only attach token if it exists AND endpoint is not public
+  if (
+    token &&
+    !config.url?.includes("/shows")   // 👈 skip public APIs
+  ) {
     config.headers.Authorization = `Bearer ${token}`;
-  } else {
-    delete config.headers.Authorization;
   }
 
   return config;
 });
+
+
+
