@@ -2,7 +2,7 @@ import axios from "axios";
 import { useSessionStore } from "../store/sessionStore";
 
 export const api = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL ?? "https://stagepass-2.onrender.com/api/shows",
+  baseURL: import.meta.env.VITE_API_BASE_URL ?? "https://stagepass-2.onrender.com/api/",
   timeout: 10000,
 });
 
